@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    padding: 5%;
+    border-right: 2px solid gray;
+    background: #aad4ff;
+}
+
+.foto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-perfil {
+    width: 50%;
+}
+
+.sobre {
+    padding: 10px;
+    border: 2px solid black;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+.foto-perfil {
+    border-radius: 100%;
+}
+
+.tabela-horarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    color: white;
+    background: linear-gradient(#015dbb, #022f61);
+}
+
+td:first-child {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background: #aad4ff;
+}
+
+tr:hover {
+    background: lightcoral;
+}
+
+.legenda-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: left;
+}

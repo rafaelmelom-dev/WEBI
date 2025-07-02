@@ -1,0 +1,32 @@
+body {
+    justify-items: center;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    color: white;
+    background: linear-gradient(#015dbb, #022f61);
+}
+
+td:first-child {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background: #aad4ff;
+}
+
+tr:hover {
+    background: lightcoral;
+}

@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.superior {
+    background: orange;
+    border: 50px solid green;
+    width:80%;
+    height:200px;
+}
+
+.inferior {
+    margin-top: 30px;
+    background: purple;
+    border-top: 50px solid yellow;
+    border-bottom: 50px solid yellow;
+    border-right: 50px solid brown;
+    border-left: 50px solid brown;
+    width: 80%;
+    height: 200px;
+}
+}

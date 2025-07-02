@@ -1,0 +1,28 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: yellow;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+}
+
+.div1 {
+    background: lightsalmon;
+}
+
+.div2 {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: red;
+}
+
+.div3 {
+    background: green;
+}

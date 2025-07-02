@@ -1,0 +1,12 @@
+.sublinhado {
+    text-decoration-line: underline;
+}
+
+.linha-acima {
+    text-decoration-line: overline;
+    padding: 50px;
+}
+
+.linha-meio {
+    text-decoration-line: line-through;
+}

@@ -1,0 +1,20 @@
+.comeco {
+    background: lightgreen;
+    color: green;
+    font-size: 20pt;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.meio {
+    background: lightblue;
+    color: blue;
+    font-size: 20pt;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.fim {
+    background: lightcoral;
+    color: red;
+    font-size: 20pt;
+    font-family: "Times New Roman", Times, serif;
+}
