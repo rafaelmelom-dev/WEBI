@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeI</title>
+    </head>
+
+    <body>
+        <p id="paragraf" style="color: blue">
+            Este parágrafo terá sua cor alterada.
+        </p>
+        <button onclick="alterarCorParagVer()">
+            Alterar para cor vermelha
+        </button>
+        <button onclick="alterarCorParagAzul()">Alterar para cor azul</button>
+
+        <script>
+            function alterarCorParagVer() {
+                document.getElementById("paragraf").style.color = "red";
+            }
+
+            function alterarCorParagAzul() {
+                document.getElementById("paragraf").style.color = "blue";
+            }
+        </script>
+    </body>
+</html>

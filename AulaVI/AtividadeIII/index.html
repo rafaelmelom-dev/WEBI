@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeIII</title>
+    </head>
+
+    <body>
+        <p id="primeiroParagrafo">Primeiro parágrafo</p>
+        <p id="segundoParagrafo">Segundo parágrafo</p>
+        <p id="terceiroParagrafo">Terceiro parágrafo</p>
+
+        <button onclick="ocultarParagrafs()">Ocultar parágrafos</button>
+
+        <button onclick="mostrarParagrafs()">Mostrar parágrafos</button>
+
+        <script>
+            function ocultarParagrafs() {
+                document.getElementById("primeiroParagrafo").style.display =
+                    "none";
+                document.getElementById("segundoParagrafo").style.display =
+                    "none";
+                document.getElementById("terceiroParagrafo").style.display =
+                    "none";
+            }
+
+            function mostrarParagrafs() {
+                document.getElementById("primeiroParagrafo").style.display =
+                    "block";
+                document.getElementById("segundoParagrafo").style.display =
+                    "block";
+                document.getElementById("terceiroParagrafo").style.display =
+                    "block";
+            }
+        </script>
+    </body>
+</html>
