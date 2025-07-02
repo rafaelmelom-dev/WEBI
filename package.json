@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "live-server": "^1.2.0",
-    "universal-geocoder": "^0.14.2"
-  }
-}
