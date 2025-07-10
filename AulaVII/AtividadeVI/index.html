@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeVI</title>
+    </head>
+
+    <body>
+        <p>Insira sua escolaridade:</p>
+
+        <form>
+            <input type="radio" name="escolaridade" value="fund" /> Ensino
+            Fundamental<br />
+
+            <input type="radio" name="escolaridade" value="medio" /> Ensino
+            Médio<br />
+            <input type="radio" name="escolaridade" value="sInc" /> Superior
+            Incompleto<br />
+            <input type="radio" name="escolaridade" value="sComp" /> Superior
+            Completo<br />
+            <input type="radio" name="escolaridade" value="eInc" />
+            Especialização Incompleta<br />
+            <input type="radio" name="escolaridade" value="eComp" />
+            Especialização Completa<br />
+            <input type="radio" name="escolaridade" value="mInc" /> Mestrado
+            Incompleto<br />
+            <input type="radio" name="escolaridade" value="mComp" /> Mestrado
+            Completo<br />
+            <input type="radio" name="escolaridade" value="dInc" /> Doutorado
+            Incompleto<br />
+            <input type="radio" name="escolaridade" value="dComp" /> Doutorado
+            Completo<br />
+            <button type="button" onclick="mostrarEsc()">
+                Mostrar escolaridade
+            </button>
+        </form>
+        <p id="print-escolaridade"></p>
+
+        <script>
+            let escolaridades_dict = {
+                fund: "Ensino Fundamental",
+                medio: "Ensino Médio",
+                sInc: "Superior Incompleto",
+                sComp: "Superior Completo",
+                eInc: "Especialização Incompleta",
+                eComp: "Especialização Completa",
+                mInc: "Mestrado Incompleto",
+                mComp: "Mestrado Completo",
+                dInc: "Doutorado Incompleto",
+                dComp: "Doutorado Completo",
+            };
+
+            function mostrarEsc() {
+                let escolaridades = document.getElementsByName("escolaridade");
+
+                let mensagem = "Você selecionou: ";
+
+                for (let esc of escolaridades) {
+                    if (esc.checked) {
+                        mensagem += escolaridades_dict[esc.value];
+                        break;
+                    }
+                }
+
+                document.getElementById("print-escolaridade").innerText =
+                    mensagem;
+            }
+        </script>
+    </body>
+</html>

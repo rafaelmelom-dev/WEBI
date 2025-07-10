@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeIII</title>
+    </head>
+
+    <body>
+        <label for="nota1">Digite a primeira nota: </label>
+        <input type="number" id="nota1" />
+        <br />
+        <label for="nota2">Digite a segunda nota: </label>
+        <input type="number" id="nota2" />
+        <br />
+        <label for="nota3">Digite a terceira nota: </label>
+        <input type="number" id="nota3" />
+        <br />
+        <button onclick="calculaMedia()">Calcular Média</button>
+        <br />
+        <p id="media"></p>
+
+        <script>
+            function calculaMedia() {
+                let nota1 = parseFloat(document.getElementById("nota1").value);
+                let nota2 = parseFloat(document.getElementById("nota2").value);
+                let nota3 = parseFloat(document.getElementById("nota3").value);
+
+                let media = (nota1 + nota2 + nota3) / 3;
+
+                document.getElementById("media").innerText = "Média: " + media;
+            }
+        </script>
+    </body>
+</html>

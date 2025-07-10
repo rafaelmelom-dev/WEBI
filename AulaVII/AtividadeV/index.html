@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeV</title>
+    </head>
+
+    <body>
+        <p>Selecione os items:</p>
+        <form>
+            <input type="checkbox" name="sanduiche" value="alface" />
+            Alface R$0,30
+            <br />
+            <input type="checkbox" name="sanduiche" value="presunto" />
+            Presunto R$0,70
+            <br />
+            <input type="checkbox" name="sanduiche" value="peito_de_peru" />
+            Peito de Peru R$1,00
+            <br />
+            <input type="checkbox" name="sanduiche" value="azeitonas" />
+            Azeitonas R$0,50
+            <br />
+            <input type="checkbox" name="sanduiche" value="tomate" />
+            Tomate R$0,50
+            <br />
+            <input type="checkbox" name="sanduiche" value="queijo" />
+            Queijo R$1,00
+            <br />
+            <input type="checkbox" name="sanduiche" value="ovo" />
+            Ovo R$0,50
+            <br />
+            <input type="checkbox" name="sanduiche" value="milho" />
+            Milho R$0,30
+            <br />
+            <input type="checkbox" name="sanduiche" value="peito_de_frango" />
+            Peito de Frango R$2,00
+            <br />
+            <br />
+            <p>Itens básicos e mão de obra são R$4,00</p>
+
+            <button onclick="fazerPedido()" type="button">Fazer pedido</button>
+        </form>
+        <p id="preco"></p>
+
+        <script>
+            let ingredientes = {
+                alface: 0.3,
+                presunto: 0.7,
+                peito_de_peru: 1,
+                azeitonas: 0.5,
+                tomate: 0.5,
+                queijo: 1,
+                ovo: 0.5,
+                milho: 0.3,
+                peito_de_frango: 2,
+            };
+
+            function fazerPedido() {
+                const itens = document.getElementsByName("sanduiche");
+
+                let preco = 4;
+
+                for (let item of itens) {
+                    if (item.checked) preco += ingredientes[item.value];
+                }
+
+                document.getElementById("preco").innerText =
+                    "Preço: R$ " + preco;
+            }
+        </script>
+    </body>
+</html>
