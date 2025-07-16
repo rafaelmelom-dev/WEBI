@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeIII</title>
+    </head>
+
+    <body>
+        <label for="nome">Nome: </label
+        ><input type="text" id="nome" onchange="calcular()" /><br />
+        <label for="idade">Idade: </label
+        ><input type="number" id="idade" onchange="calcular()" /><br />
+        <label for="altura">Altura: </label
+        ><input type="number" id="altura" onchange="calcular()" /><br />
+
+        <p id="resultado"></p>
+
+        <script>
+            function calcular() {
+                idade = parseInt(document.getElementById("idade").value);
+                altura = parseFloat(document.getElementById("altura").value);
+
+                if (altura > 1.86 && idade > 17 && idade < 35) {
+                    document.getElementById("resultado").innerText =
+                        "Nome: " + document.getElementById("nome").value;
+                } else {
+                    document.getElementById("resultado").innerText =
+                        "Idade: " + idade + " - " + "Altura: " + altura;
+                }
+            }
+        </script>
+    </body>
+</html>

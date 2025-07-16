@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeV</title>
+    </head>
+
+    <body>
+        <div id="entradas">
+            <div>
+                <label for="numeros">Numero: </label>
+                <input class="numeros" name="numeros" />
+                <br />
+            </div>
+        </div>
+        <br />
+        <button onclick="add()">Add</button>
+        <button onclick="remove()">Remove</button>
+        <button onclick="calcular()">Calcular</button>
+
+        <p id="resultado"></p>
+
+        <script>
+            function add() {
+                const node = document.createElement("div");
+                const label = document.createElement("label");
+                const input = document.createElement("input");
+
+                input.className = "numeros";
+                input.name = "numeros";
+
+                label.for = "numeros";
+                label.innerText = "Número: ";
+
+                node.appendChild(label);
+                node.appendChild(input);
+                node.appendChild(document.createElement("br"));
+
+                document.getElementById("entradas").appendChild(node);
+            }
+
+            function remove() {
+                document
+                    .getElementById("entradas")
+                    .removeChild(document.getElementById("entradas").lastChild);
+            }
+
+            function calcular() {
+                numeros = document.getElementsByClassName("numeros");
+                count = 0;
+                count_pos = 0;
+                media = 0;
+
+                for (let numero_obj of numeros) {
+                    let numero = parseFloat(numero_obj.value);
+
+                    count += 1;
+
+                    if (numero >= 0) count_pos += 1;
+
+                    media += numero;
+                }
+
+                media /= count;
+
+                document.getElementById("resultado").innerText =
+                    "[Média] := " +
+                    media +
+                    "\n[Positivos] := " +
+                    count_pos +
+                    "\n[Negativos] := " +
+                    (count - count_pos) +
+                    "\n[Positivos %] := " +
+                    (count_pos / count) * 100 +
+                    "%\n[Negativos %] := " +
+                    ((count - count_pos) / count) * 100 +
+                    "%\n";
+            }
+        </script>
+    </body>
+</html>

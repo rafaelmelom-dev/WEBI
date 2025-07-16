@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeIV</title>
+    </head>
+
+    <body>
+        <label for="temp">Temperatura: </label
+        ><input type="number" class="temp" name="temp" />
+        <br />
+        <label for="temp">Temperatura: </label
+        ><input type="number" class="temp" name="temp" />
+        <br />
+        <label for="temp">Temperatura: </label
+        ><input type="number" class="temp" name="temp" />
+        <br />
+        <label for="temp">Temperatura: </label
+        ><input type="number" class="temp" name="temp" />
+        <br />
+        <label for="temp">Temperatura: </label
+        ><input type="number" class="temp" name="temp" />
+        <br />
+        <label for="temp">Temperatura: </label
+        ><input type="number" class="temp" name="temp" />
+        <br />
+        <label for="temp">Temperatura: </label
+        ><input type="number" class="temp" name="temp" />
+        <br />
+        <label for="temp">Temperatura: </label
+        ><input type="number" class="temp" name="temp" />
+        <br />
+        <label for="temp">Temperatura: </label
+        ><input type="number" class="temp" name="temp" />
+        <br />
+        <label for="temp">Temperatura: </label
+        ><input type="number" class="temp" name="temp" />
+        <br />
+
+        <button onclick="calcular()">Calcular</button>
+
+        <p id="resultado"></p>
+
+        <script>
+            function calcular() {
+                temps = document.getElementsByClassName("temp");
+                temp_med = 0;
+                temp_min = null;
+                temp_max = null;
+
+                for (let temp of temps) {
+                    temp_med += parseFloat(temp.value);
+
+                    if (temp_min == null) temp_min = parseFloat(temp.value);
+                    if (temp_max == null) temp_max = parseFloat(temp.value);
+
+                    if (temp_min != null && parseFloat(temp.value) < temp_min)
+                        temp_min = parseFloat(temp.value);
+                    if (temp_max != null && parseFloat(temp.value) > temp_max)
+                        temp_max = parseFloat(temp.value);
+                }
+
+                temp_med /= 10;
+
+                document.getElementById("resultado").innerText =
+                    "Media: " +
+                    temp_med +
+                    "\nMin: " +
+                    temp_min +
+                    "\nMax: " +
+                    temp_max;
+            }
+        </script>
+    </body>
+</html>

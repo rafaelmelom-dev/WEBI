@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeII</title>
+    </head>
+
+    <body>
+        <div id="entradas">
+            <div>
+                <label for="idade">Idade: </label>
+                <input type="number" class="idade" />
+                <br />
+                <label for="peso">Peso: </label>
+                <input type="number" class="peso" />
+                <br />
+                <br />
+            </div>
+        </div>
+        <button onclick="add()">Add</button>
+        <button onclick="remove()">Remove</button>
+        <button onclick="calcula()">Calcular</button>
+
+        <p id="resultado"></p>
+
+        <script>
+            function add() {
+                entradas = document.getElementById("entradas");
+
+                entradas.innerHTML +=
+                    '<div><label for="idade">Idade: </label><input type="number" class="idade" /><br />\
+                <label for="peso">Peso: </label><input type="number" class="peso" /><br /><br /></div>';
+            }
+
+            function remove() {
+                entradas = document.getElementById("entradas");
+
+                entradas.removeChild(entradas.lastChild);
+            }
+
+            function calcula() {
+                media1 = 0;
+                c1 = 0;
+                media2 = 0;
+                c2 = 0;
+                media3 = 0;
+                c3 = 0;
+                media4 = 0;
+                c4 = 0;
+
+                idades = document.getElementsByClassName("idade");
+                pesos = document.getElementsByClassName("peso");
+
+                for (let i = 0; i < idades.length; i++) {
+                    if (idades[i].value > 30) {
+                        media4 += parseFloat(pesos[i].value);
+                        c4 += 1;
+                    } else if (idades[i].value > 20) {
+                        media3 += parseFloat(pesos[i].value);
+                        c3 += 1;
+                    } else if (idades[i].value > 10) {
+                        media2 += parseFloat(pesos[i].value);
+                        c2 += 1;
+                    } else if (idades[i].value > 0) {
+                        media1 += parseFloat(pesos[i].value);
+                        c1 += 1;
+                    }
+                }
+
+                media4 /= c4;
+                media3 /= c3;
+                media2 /= c2;
+                media1 /= c1;
+
+                document.getElementById("resultado").innerText =
+                    "[1:10] - " +
+                    media1 +
+                    "\n[11:20] - " +
+                    media2 +
+                    "\n[21:30] - " +
+                    media3 +
+                    "\n[31:+] - " +
+                    media4;
+            }
+        </script>
+    </body>
+</html>

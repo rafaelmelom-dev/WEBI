@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeI</title>
+    </head>
+
+    <body>
+        <label for="num1">Numero 1: </label>
+        <input type="number" name="num1" id="num1" />
+        <br />
+        <label for="num2">Numero 2: </label>
+        <input type="number" name="num2" id="num2" />
+        <br />
+
+        <label for="ops">Escolha uma operação</label>
+        <select name="ops" id="ops">
+            <option value="soma">Soma</option>
+            <option value="sub">Subtração</option>
+            <option value="mult">Multiplicação</option>
+            <option value="div">Divisão</option>
+        </select>
+        <br />
+
+        <button onclick="calcular()">Calcular</button>
+        <br />
+
+        <p id="resultado"></p>
+
+        <script>
+            function calcular() {
+                num1 = parseFloat(document.getElementById("num1").value);
+                num2 = parseFloat(document.getElementById("num2").value);
+                ops = document.getElementById("ops").value;
+                resultado = 0;
+
+                switch (ops) {
+                    case "soma":
+                        resultado = num1 + num2;
+                        break;
+                    case "sub":
+                        resultado = num1 - num2;
+                        break;
+                    case "mult":
+                        resultado = num1 * num2;
+                        break;
+                    case "div":
+                        resultado = num1 / num2;
+                        break;
+                }
+
+                document.getElementById("resultado").innerText =
+                    "Resultado: " + resultado;
+            }
+        </script>
+    </body>
+</html>
