@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeIII</title>
+    </head>
+
+    <body>
+        <div id="add"></div>
+
+        <table>
+            <tr>
+                <td>
+                    <label for="marca">Marca: </label>
+                </td>
+                <td>
+                    <input type="text" id="marca" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="modelo">Modelo: </label>
+                </td>
+                <td>
+                    <input type="text" id="modelo" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="ano">Ano: </label>
+                </td>
+                <td>
+                    <input type="text" id="ano" />
+                </td>
+            </tr>
+        </table>
+        <button onclick="adicionar()">Adicionar</button>
+
+        <script>
+            class Carro {
+                constructor(marca, modelo, ano) {
+                    this.marca = marca;
+                    this.modelo = modelo;
+                    this.ano = ano;
+                }
+
+                descricao() {
+                    return `Marca: ${this.marca} - Modelo: ${this.modelo} - Ano: ${this.ano}`;
+                }
+            }
+
+            function adicionar() {
+                p = document.createElement("p");
+                add_div = document.getElementById("add");
+                marca_input = document.getElementById("marca");
+                modelo_input = document.getElementById("modelo");
+                ano_input = document.getElementById("ano");
+
+                if (marca_input.value == "") return;
+                if (modelo_input.value == "") return;
+                if (ano_input.value == "") return;
+
+                carro = new Carro(
+                    marca_input.value,
+                    modelo_input.value,
+                    ano_input.value
+                );
+
+                p.textContent = carro.descricao();
+                add_div.appendChild(p);
+            }
+        </script>
+    </body>
+</html>

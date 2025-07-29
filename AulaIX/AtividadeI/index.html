@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeI</title>
+    </head>
+
+    <body>
+        <div id="add_list"></div>
+        <button onclick="mostrar_lista()">Mostrar lista</button>
+
+        <script>
+            function mostrar_lista() {
+                ul = document.createElement("ul");
+
+                for (let i = 0; i < 10; i++) {
+                    li = document.createElement("li");
+                    li.textContent = "Item " + (i + 1);
+                    ul.appendChild(li);
+                }
+
+                document.getElementById("add_list").appendChild(ul);
+            }
+        </script>
+    </body>
+</html>

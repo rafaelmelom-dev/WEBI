@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeII</title>
+    </head>
+
+    <body>
+        <div id="add"></div>
+        <label for="frutas">Fruta: </label>
+        <input type="text" id="frutas" />
+        <button onclick="adicionar()">Adicionar</button>
+        <button onclick="ordenar()">Ordenar</button>
+
+        <script>
+            const frutas = [];
+
+            function adicionar() {
+                add_div = document.getElementById("add");
+                frutas_input = document.getElementById("frutas");
+                ol = document.createElement("ol");
+
+                if (frutas_input.value == "") return;
+
+                frutas.push(frutas_input.value);
+                frutas_input.value = "";
+
+                for (let fruta of frutas) {
+                    li = document.createElement("li");
+                    li.textContent = fruta;
+                    ol.appendChild(li);
+                }
+
+                add_div.innerHTML = "";
+                add_div.appendChild(ol);
+            }
+
+            function ordenar() {
+                add_div = document.getElementById("add");
+                ol = document.createElement("ol");
+
+                frutas.sort();
+
+                for (let fruta of frutas) {
+                    li = document.createElement("li");
+                    li.textContent = fruta;
+                    ol.appendChild(li);
+                }
+
+                add_div.innerHTML = "";
+                add_div.appendChild(ol);
+            }
+        </script>
+    </body>
+</html>
