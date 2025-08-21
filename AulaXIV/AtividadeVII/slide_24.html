@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeVII - Slide 24</title>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(document).ready(function () {
+                $("button").click(function () {
+                    var div = $("div");
+                    div.animate({ left: "100px" }, "slow");
+                    div.animate({ fontSize: "3em" }, "slow");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>Slide 24</h1>
+        <hr />
+
+        <div
+            style="
+                background: #98bf21;
+                height: 100px;
+                width: 100px;
+                position: absolute;
+            "
+        >
+            HELLO
+        </div>
+        <button style="position: relative; top: 125px" type="button">
+            Animar
+        </button>
+    </body>
+</html>

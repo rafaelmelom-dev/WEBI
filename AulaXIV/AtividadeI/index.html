@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeI</title>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(document).ready(() => {
+                $("p").dblclick(function () {
+                    $(this).css("background", "red");
+                });
+
+                $("p").css("font-size", "2rem");
+            });
+        </script>
+    </head>
+
+    <body>
+        <p>Parágrafo primeiro</p>
+        <p>Parágrafo segundo</p>
+        <p>Parágrafo terceiro</p>
+    </body>
+</html>

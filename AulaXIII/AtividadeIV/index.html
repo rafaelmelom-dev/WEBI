@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeIV</title>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+
+        <script>
+            $(document).ready(() => {
+                $("#btn").click(() => {
+                    $("p").css("color", (index) => {
+                        return index == 2 ? "red" : "black";
+                    });
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <p>Primeiro parágrafo</p>
+        <p>Segundo parágrafo</p>
+        <p>Terceiro parágrafo</p>
+        <p>Quarto parágrafo</p>
+        <button id="btn" type="button">
+            Altere a cor do terceiro parágrafo
+        </button>
+    </body>
+</html>

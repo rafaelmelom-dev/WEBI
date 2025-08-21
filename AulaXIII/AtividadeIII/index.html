@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeIII</title>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(document).ready(() => {
+                $("#t1 tr:even").css("background", "green");
+                $("#t1 tr:even").css("color", "white");
+                $("#t1 tr:odd").css("background", "yellow");
+            });
+        </script>
+    </head>
+
+    <body>
+        <table id="t1" style="width: 100%; font-size: 40px">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Produto 1</td>
+                    <td>R$ 10,00</td>
+                </tr>
+                <tr>
+                    <td>Produto 2</td>
+                    <td>R$ 20,00</td>
+                </tr>
+                <tr>
+                    <td>Produto 3</td>
+                    <td>R$ 30,00</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

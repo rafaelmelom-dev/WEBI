@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeII</title>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(document).ready(() => {
+                $("#caixa-texto").mousedown(function () {
+                    $(this).css({
+                        background: "blue",
+                        color: "white",
+                    });
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="caixa-texto">Caixa de texto logo aqui!</div>
+    </body>
+</html>

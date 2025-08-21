@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeVI</title>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(document).ready(function () {
+                $("img").css("border-radius", "1rem");
+
+                $("img").mouseenter(function () {
+                    $(this).css("border", "4px solid black");
+                });
+
+                $("img").mouseleave(function () {
+                    $(this).css("border", "none");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.marceloponzoni.com.br%2Fwp-content%2Fuploads%2F2015%2F04%2Fshutterstock_109408355.jpg&f=1&nofb=1&ipt=24ab49849e18808f284276393d996bde687cb3e25bf8c985b2fc4a230fb5b94d"
+            style="width: 400px"
+        />
+    </body>
+</html>

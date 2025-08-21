@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeV</title>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(document).ready(function () {
+                $("#caixa-botao").css({
+                    padding: "10px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    border: "1px solid black",
+                });
+                $("#caixa-botao").mouseleave(function () {
+                    $(this).css("background", "red");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="caixa-botao">
+            <button type="button">Clique Aqui!</button>
+        </div>
+    </body>
+</html>

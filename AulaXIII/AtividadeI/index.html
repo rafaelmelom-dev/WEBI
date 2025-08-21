@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeI</title>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(document).ready(() => {
+                $("#btn").click(() => {
+                    $("#btn").text("Você clicou aqui!");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <button
+            id="btn"
+            type="button"
+            style="width: 400px; height: 100px; font-size: 50px"
+        >
+            Clique aqui
+        </button>
+    </body>
+</html>

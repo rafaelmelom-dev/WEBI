@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AtividadeVII - Slide 21</title>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(document).ready(function () {
+                $("button").click(function () {
+                    $("div").animate({
+                        left: "250px",
+                        opacity: "0.5",
+                        height: "150px",
+                        width: "150px",
+                    });
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>Slide 21</h1>
+        <hr />
+
+        <div
+            style="
+                background: #98bf21;
+                height: 100px;
+                width: 100px;
+                position: absolute;
+            "
+        ></div>
+        <button style="position: relative; top: 125px" type="button">
+            Animar
+        </button>
+    </body>
+</html>
